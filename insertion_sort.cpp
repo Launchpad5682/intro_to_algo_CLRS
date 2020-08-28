@@ -2,15 +2,9 @@
 
 using namespace std;
 
-int main()
+void insertionSort(vector<int> &arr)
 {
-    int n, t;
-    cin >> n;
-    vector<int> arr(n);
-
-    for (int i = 0; i < n; i++)
-        cin >> arr.at(i);
-
+    int n = arr.size();
     for (int i = 1; i < n; i++)
     {
         int key = arr.at(i);
@@ -22,6 +16,18 @@ int main()
         }
         arr[j + 1] = key;
     }
+}
+
+int main()
+{
+    int n, t;
+    cin >> n;
+    vector<int> arr(n);
+
+    for (int i = 0; i < n; i++)
+        cin >> arr.at(i);
+
+    insertionSort(arr);
 
     for (auto i : arr)
         cout << i << " ";
