@@ -2,3 +2,4 @@ bubblesort
 countingSort 
 insertion_sort 
 mergeSort
+selectionSort
